@@ -20,6 +20,8 @@ Route::get('/', function () {
 
 Route::get('/redirects',[HomeController::class,"index"]);
 
+Route::post('/addadmin',[HomeController::class,"addadmin"]);
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
